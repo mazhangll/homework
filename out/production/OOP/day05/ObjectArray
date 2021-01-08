@@ -1,0 +1,42 @@
+package day05;
+
+public class ObjectArray {
+    public static void main(String[] args) {
+        // 动态赋值
+        Student2[] stu = new Student2[2];
+        stu[0] = new Student2("xiao", 32);
+        System.out.println(stu[0].name);
+
+        // 静态赋值
+        Student2[] stu1 = {new Student2("da", 21), new Student2()};
+
+
+        stu1[0] = new Student2("www", 32);
+        stu1[0].study("python");
+
+        String b = stu1[1].name;
+
+        System.out.println(stu1[0].name);
+        System.out.println(b);
+    }
+}
+
+
+class Student2{
+
+    String name;
+    int age;
+
+   public Student2(){
+
+    }
+
+    public Student2(String name, int age){
+       this.name = name;
+       this.age = age;
+
+    }
+    void study(String kemu){
+        System.out.println("study"+ kemu);
+    }
+}

@@ -1,0 +1,68 @@
+package day05;
+
+import jdk.dynalink.linker.GuardingDynamicLinker;
+
+public class Hotel1 {
+    public static void main(String[] args) {
+        Hotel hotel = new Hotel();
+        //hotel.rooms(1002);
+        System.out.println(hotel.rooms(2002));
+    }
+}
+
+// 酒店类
+class Hotel{
+    Room[][] rooms = new Room[5][5];
+    int num;
+    Hotel(){}
+    for(int i =0 ;i<5;i++){
+        for(int j = 0;j<rooms[i].length;j++){
+            int number = (i+1)*1000+j;
+            rooms[i][j] = new Room(number);
+        }
+    }
+    Hotel(int num) {
+        this.num =num;
+        switch (num){
+            case 1:
+        //入住
+
+
+            case 2:
+        //退房
+            case 3:
+        //查房
+    }
+    }
+}
+
+
+
+}
+//房间类
+class Room{
+    int number;
+    Guest guest;
+
+    public Room(){
+
+    }
+    public Room(int number){
+        this.number = number;
+    }
+
+}
+//客户类
+class Guest{
+    String name;
+    int id;
+
+    public Guest(){
+
+    }
+    public Guest(String name, int id){
+        this.id=id;
+        this.name = name;
+
+    }
+}

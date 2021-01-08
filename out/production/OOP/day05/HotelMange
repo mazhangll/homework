@@ -1,0 +1,87 @@
+package day05;
+
+import com.sun.nio.sctp.AbstractNotificationHandler;
+
+public class HotelMange {
+    public static void main(String[] args) {
+        // 办理入住
+        // 办理退房
+        // 查房
+        // 退出程序
+        System.out.println("Welcome to Zhizheng Hotel!");
+
+
+    }
+
+
+}
+
+// 房间信息
+class House{
+    //房间属性
+    //房间号
+
+    int[][]  houseNum = new int[5][5];
+
+    for(int i =1;i<=5;i++){
+        houseNum[i] = new int[5];
+        for(int j=1 ;j<=5;j++){
+            houseNum[i][j]= i*1000+j;
+
+        }
+    }
+    //房间空还是有人
+    //假设有房价有人
+    String[][] isPerson = new String[5][5];
+    for(int i =0; i<=5; i++){
+        isPerson[i] = new String[5];
+
+
+        }
+        isPerson[0][1] = "Lucy";
+    int housenum(){
+
+        return houseNum[i][j];
+    }
+
+    }
+
+// 客户信息
+class Person{
+    String name;
+    String age;
+    public Person(){
+
+    }
+    public Person(String name, String age){
+        this.name = name;
+        this.age = age;
+    }
+
+}
+
+// 入住
+class Enter{
+    String name;
+    int houseNum;
+    String isPerson;
+    public Enter(){
+
+    }
+    public Enter(String name ,int houseNum, String isPerson){
+        this name = name;
+        this.houseNum = houseNum;
+        this.isPerson = isPerson;
+    }
+    void panduan(){
+
+
+    }
+//    }
+//    Person someone = new Person(name,age);
+
+
+}
+//查房
+
+ // 退房

@@ -1,0 +1,123 @@
+package day05;
+
+public class Game {
+    public static void main(String[] args) {
+
+
+//        System.out.println("游戏开始。。。。");
+//        table table = new table(30, 10);
+//        table.printCell();
+
+        // 创建一个格子
+        Cell cell = new Cell(4,6,0,2);
+        cell.printCell();
+        //System.out.println("("+cell.row+","+cell.col+")");
+
+        // 画四个格子
+//        Cell[] fourCell = new Cell[4];
+//        fourCell[0] = new Cell(3,4);
+//        fourCell[1] = new Cell(3,5);
+//        fourCell[2] = new Cell(3,6);
+//        fourCell[3] = new Cell(4,5);
+//        fourCell[0].printCell();
+//        fourCell[1].printCell();
+    }
+}
+
+// 绘制表格
+
+class table {
+    int row;
+    int col;
+
+    public table(){
+
+    };
+    public table(int row, int col){
+        this.row = row;
+        this.col = col;
+
+    }
+    // 打印表格
+    void printCell(){
+        for(int i=0; i< this.row; i++){
+            System.out.println();
+            for(int j=0; j< this.col; j++){
+
+                System.out.print(" "+"-");
+            }
+        }
+
+    }
+}
+
+
+// 格子类
+class Cell{
+
+    //属性 行 列
+    int row;
+    int col;
+    // 改变量
+    int x;
+    int y;
+
+
+
+    public Cell(){
+
+    };
+    public Cell(int row, int col,int x,int y){
+        this.row = row;
+        this.col = col;
+        this.x = x;
+        this.y =y;
+
+    }
+
+    void printCell(){
+        int row1 =20;
+        int col1=10;
+        for(int i = 0; i < row1; i++){
+            System.out.println();
+            for(int j = 0; j < col1; j++){
+                // 找到想要的点
+                if(i == this.row && j == this.col){
+                    System.out.print(" "+"*");
+                }else if(i == this.row && j == this.col+1){
+                    System.out.print(" "+"*");
+                }else if(i == this.row && j == this.col+2){
+                    System.out.print(" "+"*");
+                }else if(i == this.row+1 && j == this.col+1){
+
+                    System.out.print(" "+"*");
+
+                }else{
+                    System.out.print(" "+"-");
+                }
+
+            }
+        }
+
+
+
+    }
+    void  printCell1(){
+        int row1 =20;
+        int col1=10;
+        for(int i = 0; i < row1; i++){
+            System.out.println();
+            for(int j = 0; j < col1; j++){
+                // 找到想要的点
+                if(i == this.row+this.x && j == this.col+this.y) {
+                    System.out.print(" " + "*");
+                }else{
+                    System.out.print(" "+"-");
+                }
+
+            }
+        }
+
+    }
+}
+
